@@ -1,4 +1,5 @@
 const express = require("express");
+//morgan???
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //routes
 app.get(`${PERMISSION_ENDPOINT_URI}/`, PermissionEndpoint.list);
 app.post(`${PERMISSION_ENDPOINT_URI}/`, PermissionEndpoint.create);
+//UMA
 app.post(`${AUTHORIZATION_ENDPOINT_URI}/`, AuthorizationEndpoint.create);
 app.post(`${INTROSPECTION_ENDPOINT_URI}/`, IntrospectionEndpoint.introspect);
 
